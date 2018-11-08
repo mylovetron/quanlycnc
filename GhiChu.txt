@@ -1,0 +1,44 @@
+1.composer install
+2.php artisan key:generate  
+3.php artisan cache:clear
+4.php artisan migrate
+5.php artisan migrate:refresh
+6.php artisan make:migration add_votes_to_users_table
+php artisan config:cache
+php artisan config:clear
+
+-----------------------------------------------
+
+Now if you want to use phpMyAdmin in Laragon please follow below steps:
+
+Download latest phpMyAdmin zip from here
+Extract to path/to/laragon/etc/apps
+The folder name must be phpMyAdmin
+Restart Laragon and enjoy
+
+https://www.phpmyadmin.net/downloads/
+Laragon's Menu (Menu > MySQL > Reset and generate a random password for root)
+
+-------------------------------------------------------------------------------------
+php artisan make:model Cate
+php artisan make:request CateRequest
+
+----------------------------------------------------------
+thay doi lenh php composer.phar dump-autoload
+banh lenh composer update
+------------------------------------------------------------------
+shopping card
+composer require gloudemans/shoppingcart
+
+-----------------------------------------------------------------
+push Heroku
+
+git pull origin master 
+git add . 
+git commit -am "pre-heroku" 
+git push heroku master
+-------------------------------------------------------------
+rename namefolder
+
+git mv old new
+------------------------------------------------------------------
