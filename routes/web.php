@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('test', function () {
-    return view('welcome');
+Route::get('/', function () {
+    return view('user2.index');
 });
 
 
@@ -39,7 +39,7 @@ Route::group(['prefix'=>'admin'],function (){
     
 });
 
-Route::get('/','WelcomeController@index');
+//Route::get('/','WelcomeController@index');
      
 Auth::routes();
 
