@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta charset="utf-8" />
-    <title>Admin</title>
+    <title>Admin quản lý vật tư CNC</title>
 
     <meta name="description" content="Static &amp; Dynamic Tables" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -78,7 +78,7 @@
             <li class="">
                 <a href="{!!url('admin/cate/list')!!}">
                     <i class="menu-icon fa fa-folder"></i>
-                    <span class="menu-text"> Danh mục sản phẩm </span>
+                    <span class="menu-text"> Danh sách vật tư </span>
                 </a>
 
                 <b class="arrow"></b>
@@ -87,7 +87,7 @@
             <li class="">
                 <a href="{!!url('admin/product/list')!!}">
                     <i class="menu-icon fa  fa-gift"></i>
-                    <span class="menu-text"> Sản Phẩm </span>
+                    <span class="menu-text"> Thống kê </span>
                 </a>
 
                 <b class="arrow"></b>

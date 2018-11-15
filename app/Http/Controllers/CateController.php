@@ -10,6 +10,7 @@ class CateController extends Controller
 {
     public  function getAdd(){
         $parent = Cate::select('id','name','parent_id')->orderBy('id','DESC')->get()->toArray();
+        //bien $parent nay dung de hien thi tren view cate
         return view('admin.pages.cate_add',compact('parent'));
     }
 

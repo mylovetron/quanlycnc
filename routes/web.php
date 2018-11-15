@@ -17,6 +17,23 @@ Route::get('/', function () {
 
 
 Route::group(['prefix'=>'admin'],function (){
+    Route::group(['prefix'=>'vattu'],function (){
+        Route::get('add',['as'=>'admin.vattu.getAdd','uses'=>'VattuController@getAdd']);
+        Route::post('add',['as'=>'admin.vattu.postAdd','uses'=>'VattuController@postAdd']);
+        Route::get('list',['as'=>'admin.vattu.getList','uses'=>'VattuController@getList']);
+
+        //Route::get('delete/{id}',['as'=>'admin.cate.getDelete','uses'=>'CateController@getDelete']);
+        //Route::get('edit/{id}',['as'=>'admin.cate.getEdit','uses'=>'CateController@getEdit']);
+        //Route::post('edit/{id}',['as'=>'admin.cate.postEdit','uses'=>'CateController@postEdit']);
+        Route::get('importExportVattu',['as'=>'admin.vattu.importExportVattu','uses'=>'MaatwebsiteVattuController@importExport']);
+        
+        //Route::get('downloadExcel/{type}', 'MaatwebsiteVattuController@downloadExcel');
+        Route::post('importExcel',['as'=>'admin.vattu.importExcel','uses'=>'MaatwebsiteVattuController@test']);
+
+    });
+
+
+
     Route::group(['prefix'=>'cate'],function (){
         Route::get('add',['as'=>'admin.cate.getAdd','uses'=>'CateController@getAdd']);
         Route::post('add',['as'=>'admin.cate.postAdd','uses'=>'CateController@postAdd']);
@@ -53,3 +70,4 @@ Route::get('xoa-san-pham/{id}',['as'=>'xoasanpham','uses'=>'WelcomeController@xo
 Route::get('cap-nhat/{id}/{qty}',['as'=>'capnhat','uses'=>'WelcomeController@capnhat']);
 Route::get('dat-hang',['as'=>'dathang','uses'=>'WelcomeController@getcheckout']);
 Route::post('dat-hang',['as'=>'dathang','uses'=>'WelcomeController@postcheckout']);
+
