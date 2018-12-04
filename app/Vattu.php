@@ -8,5 +8,5 @@ class Vattu extends Model
 {
     protected $table='vattu';
 
-    protected  $fillable=['mavattu','tenvattu','hieu','dvt','soluong_tondauky','soluong_toncuoiky','macu','number'];
+    protected  $fillable=['mavattu','tenvattu','hieu','dvt','soluong_tondauky','soluong_toncuoiky','macu','number','ghichu'];
 }

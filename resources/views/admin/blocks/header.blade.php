@@ -14,7 +14,7 @@
             <a href="index.html" class="navbar-brand">
                 <small>
                     <i class="fa fa-leaf"></i>
-                    QUẢN LÝ VẬT TƯ CNC
+                    QUẢN LÝ VẬT TƯ 
                 </small>
             </a>
         </div>

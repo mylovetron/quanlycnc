@@ -16,9 +16,13 @@ class CreateVattuTable extends Migration
         Schema::create('vattu', function (Blueprint $table) {
             $table->increments('id');
             $table->string('mavattu')->unique();
-            $table->string('tenvattu');
-            $table->string('hieu');
-            $table->string('dvt');
+            $table->string('tenvattu')->nullable();;
+            $table->string('hieu')->nullable();;
+            $table->string('dvt')->nullable();;
+            $table->string('quycach')->nullable();;
+            $table->string('macu')->nullable();;
+            $table->string('partnumber')->nullable();;
+            $table->string('ghichu')->nullable();;
             $table->timestamps();
         });
     }

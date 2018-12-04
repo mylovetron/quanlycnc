@@ -8,8 +8,6 @@ use DB;
 use Excel;
 
 
-
-
 class MaatwebsiteVattuController extends Controller
 {
     public function importExport()
@@ -31,7 +29,7 @@ class MaatwebsiteVattuController extends Controller
  		
         if($data[0]->count()){
             foreach ($data[0] as $key => $value) {
-                $arr[] = ['mavattu' => $value->mavattu, 'tenvattu' => $value->tenvattu,'hieu'=>'','dvt'=>$value->dvt];
+                $arr[] = ['mavattu' => $value->mavattu, 'tenvattu' => $value->tenvattu,'hieu'=>$value->hieu,'dvt'=>$value->dvt,'quycach'=>$value->quycach,'macu'=>$value->macu,'partnumber'=>$value->partnumber,'ghichu'=>$value->ghichu];
             }
  
             if(!empty($arr)){
