@@ -17,16 +17,16 @@ class PhieuNhapController extends Controller
         $phieunhap->ngaynhap=$request->dateNgayNhap;
         $phieunhap->mavattu=$request->txtMaVattu;
         $phieunhap->soluong=$request->txtSoLuong;
-        $phieunhap->dongia=$request->txtDonGia;
+        $phieunhap->giatri=$request->txtGiaTri;
         $phieunhap->nguoinhap=$request->txtNguoiNhap;
         $phieunhap->ghichu=$request->txtGhiChu;
         $phieunhap->save();
-        print_r($phieunhap);
+        //print_r($phieunhap);
         return redirect()->route('admin.phieunhap.getList')->with(['flash_level'=>'success','flash_message'=>'Thêm phiếu nhập thành công!']);
     }
 
     public  function getList(){
-        $data = PhieuNhapKho::select('mavattu','soluong','dongia','nguoinhap','ngaynhap','ghichu')->get()->toArray();
+        $data = PhieuNhapKho::select('mavattu','soluong','giatri','nguoinhap','ngaynhap','ghichu')->get()->toArray();
         return view('admin.pages.phieunhap_list',compact('data'));
     }
 

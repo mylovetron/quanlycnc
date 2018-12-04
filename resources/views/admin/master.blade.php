@@ -21,7 +21,7 @@
 
             <ul class="nav nav-list">
                 <li class="">
-                    <a href="index.html">
+                    <a href="#">
                         <i class="menu-icon fa fa-tachometer"></i>
                         <span class="menu-text"> Dashboard </span>
                     </a>
@@ -29,21 +29,90 @@
                     <b class="arrow"></b>
                 </li>
                 <li class="">
-                    <a href="{!!url('admin/cate/list')!!}">
+                    <a href="#" class="dropdown-toggle">
                         <i class="menu-icon fa fa-folder"></i>
-                        <span class="menu-text"> Danh sách vật tư </span>
+                        <span class="menu-text"> Vật tư </span>
                     </a>
 
                     <b class="arrow"></b>
+
+                    <ul class="submenu">
+                            <li class="">
+                                <a href="{!!url('admin/vattu/list')!!}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Danh sách vật tư
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="{!!url('admin/vattu/add')!!}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Thêm vật tư
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="{!!url('admin/vattu/importExportVattu')!!}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Import vật tư
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            
+                    </ul>
                 </li>
 
                 <li class="">
-                    <a href="{!!url('admin/product/list')!!}">
+                    <a href="#" class="dropdown-toggle">
                         <i class="menu-icon fa  fa-gift"></i>
-                        <span class="menu-text"> Thống kê </span>
+                        <span class="menu-text"> Phiếu nhập </span>
                     </a>
 
                     <b class="arrow"></b>
+
+                    <ul class="submenu">
+                            <li class="">
+                                <a href="{!!url('admin/phieunhap/list')!!}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Danh sách phiếu nhập
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="{!!url('admin/phieunhap/add')!!}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Thêm phiếu nhập
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="jqgrid.html">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Import phiếu nhập
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="jqgrid.html">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Thống kê
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                    </ul>
                 </li>
 
            

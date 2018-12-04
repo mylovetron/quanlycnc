@@ -8,7 +8,7 @@ class PhieuNhapKho extends Model
 {
    protected $table='phieunhap';
 
-    protected  $fillable=['maphieu','mavattu','ngaynhap','soluong','giatri','nguoinhap','ghichu'];
+    protected  $fillable=['id','mavattu','ngaynhap','soluong','giatri','nguoinhap','ghichu'];
 
     public $timestamps=true;
 }

@@ -64,9 +64,9 @@
 				</div>
 
 				<div class="form-group">
-					<label class="col-sm-3 control-label no-padding-right" for="form-field-1">Đơn giá</label>
+					<label class="col-sm-3 control-label no-padding-right" for="form-field-1">Giá trị</label>
 					<div class="col-sm-9">
-						<input type="text" id="txtDonGia"  name="txtDonGia" placeholder="Đơn giá" class="col-xs-10 col-sm-5" />
+						<input type="text" id="txtGiaTri"  name="txtGiaTri" placeholder="giá trị" class="col-xs-10 col-sm-5" />
 					</div>
 				</div>
 

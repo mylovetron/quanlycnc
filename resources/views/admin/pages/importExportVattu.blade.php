@@ -1,14 +1,25 @@
-<html lang="en">
-<head>
-    <title>Quản lý CNC</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
-</head>
-<body>
+@extends('admin/master')
+@section('pagespecificstyles')
+    <!--
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" > -->
+    
+    <style>
+        .twitter-typeahead,
+        .tt-hint,
+        .tt-input,
+        .tt-menu{
+            width: 900 ! important;
+            font-weight: normal;
+        
+        }
+    </style>
+@stop
+
+
+@section('content')
     <div class="container">
         <div class="panel panel-default">
-          <div class="panel-heading">
-          <h1>Danh mục vật tư <br> import excel</h1>
-          </div>
+          
           <div class="panel-body">
  
             <a href="{{ url('downloadExcel/xls') }}"><button class="btn btn-success">Download Excel xls</button></a>
@@ -47,5 +58,4 @@
           </div>
         </div>
     </div>
-</body>
-</html>
+@endsection

@@ -27,11 +27,12 @@
                     </th>
                     -->
                     <th class="detail-col">Chi tiết</th>
+                    <th>Ngày nhập</th>
                     <th>Mã vật tư</th>
-                    <th>Tên vật tư</th>
-                    <th>Hiệu</th>
-                    <th class="hidden-480">ĐVT</th>
-                    <th class="hidden-480">Tình trạng</th>
+                    <th>Số lượng</th>
+                    <th>Giá trị</th>
+                    <th class="hidden-480">Ghi chú</th>
+                    
                     <th></th>
                 </tr>
                 </thead>
@@ -57,22 +58,22 @@
                     </td>
                       
                     <td>
+                        <a href="#">{!! $item["ngaynhap"] !!}</a>
+                    </td>
+
+                    <td>
                         <a href="#">{!! $item["mavattu"] !!}</a>
                     </td>
                     <td>
                         {!! $item['soluong'] !!}
                     </td>
                     <td>
-                        {!! $item['dongia'] !!}
+                        {!! $item['giatri'] !!}
                     </td>
                     <td>
-                        {!! $item['ngaynhap'] !!}
+                        {!! $item['ghichu'] !!}
                     </td>
                     
-                    <td class="hidden-480">
-                        <span class="label label-sm label-warning">active</span>
-                    </td>
-
                     <td>
                         <div class="hidden-sm hidden-xs btn-group">
                             <!--
