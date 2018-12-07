@@ -11,9 +11,9 @@
         </button>
 
         <div class="navbar-header pull-left">
-            <a href="index.html" class="navbar-brand">
+            <a href="{!!url('admin/vattu/list')!!}" class="navbar-brand">
                 <small>
-                    <i class="fa fa-leaf"></i>
+                    <i class="fa fa-cogs"></i>
                     QUẢN LÝ VẬT TƯ 
                 </small>
             </a>

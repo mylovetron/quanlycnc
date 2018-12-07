@@ -30,7 +30,7 @@
                 </li>
                 <li class="">
                     <a href="#" class="dropdown-toggle">
-                        <i class="menu-icon fa fa-folder"></i>
+                        <i class="menu-icon fa fa-cubes"></i>
                         <span class="menu-text"> Vật tư </span>
                     </a>
 
@@ -70,7 +70,7 @@
 
                 <li class="">
                     <a href="#" class="dropdown-toggle">
-                        <i class="menu-icon fa  fa-gift"></i>
+                        <i class="menu-icon  fa fa-sign-in"></i>
                         <span class="menu-text"> Phiếu nhập </span>
                     </a>
 
@@ -117,7 +117,7 @@
 
                  <li class="">
                     <a href="#" class="dropdown-toggle">
-                        <i class="menu-icon fa  fa-gift"></i>
+                        <i class="menu-icon fa fa-sign-out"></i>
                         <span class="menu-text"> Phiếu xuất </span>
                     </a>
 
