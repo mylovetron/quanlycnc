@@ -96,9 +96,56 @@
                             </li>
 
                             <li class="">
-                                <a href="jqgrid.html">
+                                <a href="{!!url('admin/phieunhap/import')!!}">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Import phiếu nhập
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="jqgrid.html">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Thống kê
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                    </ul>
+                </li>
+
+                 <li class="">
+                    <a href="#" class="dropdown-toggle">
+                        <i class="menu-icon fa  fa-gift"></i>
+                        <span class="menu-text"> Phiếu xuất </span>
+                    </a>
+
+                    <b class="arrow"></b>
+
+                    <ul class="submenu">
+                            <li class="">
+                                <a href="{!!url('admin/phieuxuat/list')!!}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Danh sách phiếu xuất
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="{!!url('admin/phieuxuat/add')!!}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Thêm phiếu xuất
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="{!!url('admin/phieuxuat/import')!!}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Import phiếu xuất
                                 </a>
 
                                 <b class="arrow"></b>

@@ -34,13 +34,16 @@ Route::group(['prefix'=>'admin'],function (){
         //Route::get('downloadExcel/{type}', 'MaatwebsiteVattuController@downloadExcel');
         Route::post('importExcel',['as'=>'admin.vattu.importExcel','uses'=>'MaatwebsiteVattuController@test']);
 
-        Route::get('nhapkho',['as'=>'admin.vattu.getNhapKho','uses'=>'VattuController@getNhapKho']);
-        Route::post('nhapkho',['as'=>'admin.vattu.postNhapKho','uses'=>'VattuController@postXuatKho']);
+        Route::get('downloadExcel/{type}', 'MaatwebsiteVattuController@downloadExcel');
+
+        Route::post('importExcel',['as'=>'admin.vattu.importExcel','uses'=>'MaatwebsiteVattuController@test']);
+        //Route::get('nhapkho',['as'=>'admin.vattu.getNhapKho','uses'=>'VattuController@getNhapKho']);
+        //Route::post('nhapkho',['as'=>'admin.vattu.postNhapKho','uses'=>'VattuController@postXuatKho']);
 
 
     });
 
-     Route::group(['prefix'=>'phieunhap'],function (){
+    Route::group(['prefix'=>'phieunhap'],function (){
         Route::get('/mavattu/find', 'SearchController@searchMaVattu');
         Route::get('/tenvattu/{id}', 'SearchController@searchTenVattuAjax');
 
@@ -49,6 +52,32 @@ Route::group(['prefix'=>'admin'],function (){
 
 
         Route::get('list',['as'=>'admin.phieunhap.getList','uses'=>'PhieuNhapController@getList']);
+
+        Route::get('import',['as'=>'admin.phieunhap.getImport','uses'=>'PhieuNhapController@getImport']);
+        
+        //Route::get('downloadExcel/{type}', 'MaatwebsiteVattuController@downloadExcel');
+        Route::post('import',['as'=>'admin.phieunhap.postImport','uses'=>'PhieuNhapController@postImport']);
+
+        //Route::get('delete/{id}',['as'=>'admin.cate.getDelete','uses'=>'CateController@getDelete']);
+        //Route::get('edit/{id}',['as'=>'admin.cate.getEdit','uses'=>'CateController@getEdit']);
+        //Route::post('edit/{id}',['as'=>'admin.cate.postEdit','uses'=>'CateController@postEdit']);
+
+    });
+
+    Route::group(['prefix'=>'phieuxuat'],function (){
+        //Route::get('/mavattu/find', 'SearchController@searchMaVattu');
+        //Route::get('/tenvattu/{id}', 'SearchController@searchTenVattuAjax');
+
+        Route::get('add',['as'=>'admin.phieuxuat.getAdd','uses'=>'PhieuXuatController@getAdd']);
+        Route::post('add',['as'=>'admin.phieuxuat.postAdd','uses'=>'PhieuXuatController@postAdd']);
+
+
+        Route::get('list',['as'=>'admin.phieuxuat.getList','uses'=>'PhieuXuatController@getList']);
+
+        Route::get('import',['as'=>'admin.phieuxuat.getImport','uses'=>'PhieuXuatController@getImport']);
+        
+        //Route::get('downloadExcel/{type}', 'MaatwebsiteVattuController@downloadExcel');
+        Route::post('import',['as'=>'admin.phieuxuat.postImport','uses'=>'PhieuXuatController@postImport']);
 
         //Route::get('delete/{id}',['as'=>'admin.cate.getDelete','uses'=>'CateController@getDelete']);
         //Route::get('edit/{id}',['as'=>'admin.cate.getEdit','uses'=>'CateController@getEdit']);

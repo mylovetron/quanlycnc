@@ -15,6 +15,13 @@ class CreatePhieuxuatTable extends Migration
     {
         Schema::create('phieuxuat', function (Blueprint $table) {
             $table->increments('id');
+            //$table->string('maphieu')->unique();
+            $table->string('mavattu');
+            $table->date('ngayxuat');
+            $table->integer('soluong');
+            $table->double('giatri');
+            $table->string('nguoixuat');
+            $table->string('ghichu');
             $table->timestamps();
         });
     }

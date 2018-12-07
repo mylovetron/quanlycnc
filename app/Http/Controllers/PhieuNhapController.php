@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\PhieuNhapRequest;
 use App\PhieuNhapKho;
+use Excel;
 
 class PhieuNhapController extends Controller
 {
@@ -28,6 +29,36 @@ class PhieuNhapController extends Controller
     public  function getList(){
         $data = PhieuNhapKho::select('mavattu','soluong','giatri','nguoinhap','ngaynhap','ghichu')->get()->toArray();
         return view('admin.pages.phieunhap_list',compact('data'));
+    }
+
+    public function getImport()
+    {
+        return view('admin.pages.phieunhap_import');
+    }
+
+    public function postImport(Request $request)
+    {
+        //$mytime = Carbon\Carbon::now();
+         $request->validate([
+            'import_file' => 'required'
+        ]);
+ 
+        $path = $request->file('import_file')->getRealPath();
+        $data = Excel::load($path)->get();
+        //dd($data);
+        
+        if($data[0]->count()){
+            foreach ($data[0] as $key => $value) {
+                $arr[] = ['mavattu' => $value->mavattu, 'ngaynhap' =>today(),'soluong'=>$value->soluong,'giatri'=>$value->giatri,'nguoinhap'=>'','ghichu'=>''];
+            }
+ 
+            if(!empty($arr)){
+                PhieuNhapKho::insert($arr);
+            }
+        }
+ 
+        return back()->with('success', 'Insert Record successfully.');
+        
     }
 
 }

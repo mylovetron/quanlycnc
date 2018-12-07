@@ -16,7 +16,7 @@ class CreatePhieunhapTable extends Migration
         Schema::create('phieunhap', function (Blueprint $table) {
             $table->increments('id');
             //$table->string('maphieu')->unique();
-            $table->string('mavattu')->unique();
+            $table->string('mavattu');
             $table->date('ngaynhap');
             $table->integer('soluong');
             $table->double('giatri');

@@ -22,13 +22,13 @@
           
           <div class="panel-body">
  
-            <a href="{{ url('admin/vattu/downloadExcel/xls') }}"><button class="btn btn-success">Download Excel xls</button></a>
-            <a href="{{ url('admin/vattu/downloadExcel/xlsx') }}"><button class="btn btn-success">Download Excel xlsx</button></a>
+            <a href="{{ url('downloadExcel/xls') }}"><button class="btn btn-success">Download Excel xls</button></a>
+            <a href="{{ url('downloadExcel/xlsx') }}"><button class="btn btn-success">Download Excel xlsx</button></a>
 
  
-            <a href="{{ url('admin/vattu/downloadExcel/csv') }}"><button class="btn btn-success">Download CSV</button></a>
+            <a href="{{ url('downloadExcel/csv') }}"><button class="btn btn-success">Download CSV</button></a>
  
-            <form style="border: 4px solid #a1a1a1;margin-top: 15px;padding: 10px;" action="{!! route('admin.vattu.importExcel') !!}" class="form-horizontal" method="POST" files="true"  enctype="multipart/form-data" >
+            <form style="border: 4px solid #a1a1a1;margin-top: 15px;padding: 10px;" action="{!! route('admin.phieunhap.postImport') !!}" class="form-horizontal" method="POST" files="true"  enctype="multipart/form-data" >
             <input type="hidden" name="_token" value="{!! csrf_token() !!}" />
                 
  

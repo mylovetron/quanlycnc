@@ -9,21 +9,11 @@ use App\Vattu;
 class VattuController extends Controller
 {
     public  function getList(){
-        //$data = vattu::select('mavattu','tenvattu','hieu','dvt')->get()->toArray();
-        $data=Vattu::where('mavattu', 'LIKE', '%B%')->get()->toArray();
+       $data = Vattu::select('mavattu','tenvattu','hieu','dvt','macu','partnumber')->get()->toArray();
         return view('admin.pages.vattu_list',compact('data'));
     }
 
-    public  function getXuatKho(){
-        //$data = vattu::select('mavattu','tenvattu','hieu','dvt')->get()->toArray();
-        return view('admin.pages.vattu_xuatkho');
-    }
-
-    public  function getNhapKho(){
-        //$data = vattu::select('mavattu','tenvattu','hieu','dvt')->get()->toArray();
-        return view('admin.pages.vattu_nhapkho');
-    }
-
+   
     public  function getAdd(){
         return view('admin.pages.vattu_add');
     }
